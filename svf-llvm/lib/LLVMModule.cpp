@@ -758,14 +758,14 @@ void LLVMModuleSet::buildFunToFunMap()
                     // Create a new global variable in appModule
                     GlobalVariable* newGV = new GlobalVariable(
                         *appModule,
-                        GV->getValueType(),           // Value type
-                        GV->isConstant(),            // Constant flag
-                        GV->getLinkage(),            // Linkage type (e.g., InternalLinkage for static variables)
-                        nullptr,                     // Initializer set later
+                        GV->getValueType(),           
+                        GV->isConstant(),            
+                        GV->getLinkage(),            
+                        nullptr,                     
                         GV->getName(),
                         nullptr,
-                        GV->getThreadLocalMode(),    // Thread-local storage mode
-                        GV->getAddressSpace()        // Address space
+                        GV->getThreadLocalMode(),    
+                        GV->getAddressSpace()        
                     );
 
                     // Copy initializer if present
